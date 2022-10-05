@@ -1,3 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background: #fbfbfb;
+}
+
+img {
+    max-width: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
 }
