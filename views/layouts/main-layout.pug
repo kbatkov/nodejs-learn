@@ -6,12 +6,13 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title #{pageTitle}
         link(rel="stylesheet", href="/css/main.css")
+        block styles
     body
-        header
-            nav
-                ul
-                    li
-                        a(href="/") Shop 
-                    li
-                        a(href="/admin/add-product") Add Product
-        h1 Page not found! :(
+        header.header
+            nav.header__nav
+                ul.header__list
+                    li.header__list-item
+                        a.header__list-link(href="/", class=(path === '/' ? 'active' : '')) Shop
+                    li.header__list-item
+                        a.header__list-link(href="/admin/add-product", class=(path === '/admin/add-product' ? 'active' : '')) Add Product
+        block content
